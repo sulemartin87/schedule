@@ -54,6 +54,7 @@
 			}
 		}
 		this.result = val;
+		console.log(val)
 	},
     Counter
   }).mount()
@@ -75,7 +76,7 @@
       </select>
       <input type="date" name="" id="" min="2022-08-01" v-model="date">
       <a class="button is-outlined is-primary" @click="getResult">result</a>
-    	<p v-if="result">You will not have electricity from {{groupMap[result]}}</p>  
+    	<p v-if="result !== null">You will not have electricity from {{groupMap[result]}}</p>  
     </p>
   </main>
 
