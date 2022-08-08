@@ -38,15 +38,17 @@
 	getResult() {
 		const init = {
 			'group a': 0,
-			'group b': 1,
-			'group c': 2
+			'group b': 2,
+			'group c': 1
 		}
 		const startDate = new Date('2022-08-01');
 		const selectedDate = new Date(this.date);
 		const diffTime = Math.abs(startDate - selectedDate);
 		const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 	
 		let val = init[this.group];
-		for (let index = val; index < diffDays; index++) {
+		
+		for (let index = 0; index < diffDays; index++) {
+			console.log(val);
 			if (val >= 2) {
 				val = 0;
 			}else {
